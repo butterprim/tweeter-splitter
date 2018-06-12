@@ -1,0 +1,46 @@
+@import '../../../sass/_variables';
+
+.section {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.tweetbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweetarea {
+  display: flex;
+  padding: 4px;
+  height: 120px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border-radius: 2px;
+  resize: none;
+
+  &.error {
+    border-color: $color-error;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px $color-focus;
+    border-color: $color-focus;
+  }
+}
+
+.align-right {
+  text-align: right;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-note {
+  float: left;
+  margin-left: 16px;
+  font-size: 14px;
+}

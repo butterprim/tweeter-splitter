@@ -1,0 +1,29 @@
+.text-heavy {
+  font-weight: bold;
+}
+
+.mat-list-item:not(:first-child) {
+  border-top: 1px solid gray;
+}
+
+.time:before {
+  content: "\00b7";
+  margin-right: 4px;
+}
+
+.content-line {
+  margin: 4px 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pull-right {
+  float: right;
+}
+
+.center {
+  margin: 0 auto;
+}

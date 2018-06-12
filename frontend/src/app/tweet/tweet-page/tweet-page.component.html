@@ -1,0 +1,16 @@
+<h2>Tweeter Splitter</h2>
+<section>
+  <p>Tweeter Splitter allows you to tweet long messages without thinking about the maximum character length. The splitter will handle how to chop your very passionate long tweet into short ones and post them on your behalf!</p>
+  <p>Note that this will post tweets on the account you've logged in with. If you don't want tweets to be posted on your twitter and just want to check how this works, head over to the <a href="/demo">demo page</a>.</p>
+</section>
+
+<section class="tweeter">
+  <div class="section">
+    <app-tweeter
+      (newTweets)="postTweets($event)"
+      [isDisabled]="disableTweeting"></app-tweeter>
+  </div>
+  <div class="section">
+    <app-tweets-list [(tweets)]="postedTweets"></app-tweets-list>
+  </div>
+</section>

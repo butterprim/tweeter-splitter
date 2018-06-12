@@ -1,0 +1,21 @@
+{
+  "name": "tweeter",
+  "version": "1.0.0",
+  "description": "handles twitter requests",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/butterprim"
+  },
+  "author": "lizette daluz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "twit": "^2.2.10"
+  }
+}

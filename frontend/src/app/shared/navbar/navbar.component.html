@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="title">TweeterSplitter</span>
+    <span class="links">
+      <button mat-button (click)="goToDemo()">Demo</button>
+      <button mat-button *ngIf="isLoggedIn" (click)="goToTweeter()">Tweet</button>
+    </span>
+    <span class="spacer"></span>
+    <span class="actions">
+      <button mat-button *ngIf="isLoggedIn" (click)="logout()">Sign-out</button>
+      <button mat-button *ngIf="!isLoggedIn" (click)="login()">Sign-in</button>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

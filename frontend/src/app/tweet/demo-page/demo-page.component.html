@@ -1,0 +1,28 @@
+<h2>Tweeter Splitter Demo</h2>
+<section>
+  <p>Tweeter Splitter allows you to tweet long messages without thinking about the maximum character length. The splitter will handle how to chop your very passionate long tweet into short ones and post them on your behalf! Here's a demo on how this works.</p>
+  <p>Want your tweets to be posted on your twitter account? Sign-in and head over to the <a href="/tweeter">tweeter page</a>.</p>
+</section>
+
+<section>
+  <mat-form-field>
+    <mat-select placeholder="Maximum character length" [(value)]="maxLength">
+      <mat-option *ngFor="let lengthOption of maxLengthOptions" [value]="lengthOption">
+        {{ lengthOption }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
+
+<section class="tweeter">
+  <div class="section">
+    <app-tweeter
+      (newTweets)="postTweets($event)"
+      [isDisabled]="disableTweeting"
+      [max]="maxLength"></app-tweeter>
+  </div>
+  <div class="section">
+    <app-tweets-list [(tweets)]="postedTweets"></app-tweets-list>
+  </div>
+</section>
+

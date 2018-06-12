@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-content>
+    <span class="title">Tweets</span>
+    <span class="pull-right" *ngIf="isLoggedIn && !tweetsLoaded">
+      <button mat-button (click)="loadPreviousTweets()">Load tweets</button>
+    </span>
+  </mat-card-content>
+</mat-card>
+
+<div class="list">
+  <mat-card *ngIf="isLoadingTweets">
+    <mat-card-content>
+      <mat-spinner class="center"></mat-spinner>
+    </mat-card-content>
+  </mat-card>
+  <mat-card *ngIf="!isLoadingTweets && (!tweets || tweets.length == 0)">
+    <mat-card-content>
+      <span class="content-line">
+        No tweets to show
+      </span>
+    </mat-card-content>
+  </mat-card>
+  <div *ngIf="!isLoadingTweets && tweets && tweets.length > 0">
+    <mat-card *ngFor="let tweet of tweets">
+      <mat-card-content>
+        <div class="content-line">
+          <span class="text-heavy">{{ tweet?.user ? tweet?.user?.screen_name : 'Guest' }}</span>
+          <span class="time">{{ tweet?.created_at | amTimeAgo: true }}</span>
+        </div>
+        <div class="content-line">{{ tweet.text }}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
