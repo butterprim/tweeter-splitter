@@ -1,4 +1,4 @@
-# tweeter-splitter
+# TweeterSplitter
 Splits your tweets, and posts them on your behalf (given your permission).
 
 ## Frontend
