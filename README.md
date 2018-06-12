@@ -1,23 +1,27 @@
 # TweeterSplitter
-Splits your tweets, and posts them on your behalf (given your permission).
+Splits your tweets, and posts them on your behalf (given your permission). The app is built with Angular 5 and ExpressJS. Twitter authentication is handled by Firebase.
 
-## Frontend
-Built with Angular 5. Twitter authentication is handled in Firebase, so don't worry about it (I guess?). Run the app as follows:
+## Installation
 ```
-cd frontend
+$ git clone https://github.com/butterprim/tweeter-splitter.git
+$ cd tweeter-splitter/frontend
+$ npm install
+$ cd ../backend
+$ npm install
+```
+
+## Running the app
+Build with Angular 5 and ExpressJS.
+```
+cd tweeter-splitter/frontend
 ng serve
-```
-
-
-**Want to run tests on the splitting logic?**
-```
-cd frontend
-ng test
-```
-
-## Backend
-Built with nodejs using expressjs. It handles Twitter requests like posting tweets, getting your recent tweets, and retrieving some details from your profile. Start the backend with:
-```
-cd backend
+cd ../backend
 npm start
+```
+Access the app in http://127.0.0.1:4200. Calls to the backend are made to http://127.0.0.1:8080.
+
+## Run unit test for splitter
+```
+cd tweeter-splitter/frontend
+ng test
 ```
